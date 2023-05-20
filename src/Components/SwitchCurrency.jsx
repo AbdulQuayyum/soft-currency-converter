@@ -1,8 +1,13 @@
 import React from 'react'
+import { TbArrowsExchange } from "react-icons/tb"
 
 const SwitchCurrency = () => {
     return (
-        <div>SwitchCurrency</div>
+        <div>
+            <button className='bg-none'>
+                <TbArrowsExchange size={24} />
+            </button>
+        </div>
     )
 }
 

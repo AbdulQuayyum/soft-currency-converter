@@ -18,10 +18,10 @@ const SelectCountry = (props) => {
     };
 
     return (
-        <div>
+        <div className=' w-full'>
             <Select
                 styles={customStyles}
-                className="md:w-[300px] w-100"
+                className=" lg:w-[220px] xl:w-[300px] w-full"
                 classNamePrefix="select"
                 //   defaultValue={colourOptions[0]}
                 isClearable={isClearable}
