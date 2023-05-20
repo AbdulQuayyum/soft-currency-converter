@@ -14,8 +14,8 @@ const UseAxios = (url) => {
                 setData(response.data)
             } catch (error) {
                 setError(error)
-            } finally {
                 setLoaded(false)
+                // } finally {
             }
         }
         FetchData()

@@ -1,9 +1,16 @@
 import React, { useState } from 'react'
 import Select from "react-select"
+import UseAxios from "../Utilities/UseAxios"
+import countryData from "../Data/allcountries.json"
 
 const SelectCountry = (props) => {
+    const { label, value, setValue } = props
+    const [data] = UseAxios("https://raw.githubusercontent.com/AbdulQuayyum/soft-currency-converter/Source/src/Data/allcountries.json")
     const [isClearable, setIsClearable] = useState(true)
     const [isSearchable, setIsSearchable] = useState(true)
+
+    console.log(data)
+    // console.log(countryData)
 
     const customStyles = {
         control: (provided) => ({
