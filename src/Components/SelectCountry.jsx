@@ -5,8 +5,7 @@ import { SkeletonCard } from "../Components/Index"
 // import countryData from "../Data/allcountries.json"
 
 const SelectCountry = (props) => {
-    const [value, setValue] = useState()
-    // const { label, value, setValue } = props
+    const { label, value, setValue } = props
     const [data, error, loaded] = UseAxios("https://raw.githubusercontent.com/AbdulQuayyum/data.json/Source/country-flag.json")
     const [isClearable, setIsClearable] = useState(true)
     const [isSearchable, setIsSearchable] = useState(true)
