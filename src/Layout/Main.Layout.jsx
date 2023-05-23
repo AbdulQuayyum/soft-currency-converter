@@ -9,11 +9,18 @@ const MainLayout = () => {
     const [resultCurrency, setResultCurrency] = useState(0)
     const codeFromCurrency = fromCurrency.split(" ")[1]
     const codeToCurrency = toCurrency.split(" ")[1]
-
-    console.log(firstAmount)
+    
     useEffect(() => {
         if (firstAmount) {
-
+            axios(`${import.meta.env.VITE_BASE_URL}`, {
+                params: {
+                    apikey: import.meta.env.VITE_API_KEY,
+                    base_currency: codeFromCurrency,
+                    currencies: codeToCurrency
+                }
+            })
+                .then(response => setResultCurrency(response.data.data[codeToCurrency]))
+                .catch(error => console.log(error))
         }
     }, [firstAmount, fromCurrency, toCurrency])
 
