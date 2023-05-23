@@ -1,12 +1,11 @@
 import { useContext, useEffect, useState } from 'react'
 
+import { CurrencyContext } from '../Contexts/CurrencyContext'
 import { InputAmount, SelectCountry, SwitchCurrency } from "../Components/Index"
 import { Footer, Navbar } from "../Components/Index"
 
 const MainLayout = () => {
-    const [ fromCurrency, setFromCurrency ] = useState("")
-    const [ toCurrency, setToCurrency ] = useState("")
-    // const { fromCurrency, setFromCurrency, toCurrency, setToCurrency, firstAmount } = useContext();
+    const { fromCurrency, setFromCurrency, toCurrency, setToCurrency, firstAmount } = useContext(CurrencyContext);
 
     return (
         <div className='relative z-10 min-h-screen flex justify-between items-center flex-col max-w-7xl mx-auto sm:px-16 px-6'>
