@@ -66,7 +66,6 @@ const SelectCountry = (props) => {
                 onChange={(event) => { setValue(event?.name) }}
                 isClearable={isClearable}
                 isSearchable={isSearchable}
-                name="countries"
                 options={DataCountries}
                 formatOptionLabel={country => (
                     <div className="flex items-center gap-3 cursor-pointer">

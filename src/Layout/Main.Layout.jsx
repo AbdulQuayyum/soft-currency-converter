@@ -7,9 +7,10 @@ import { Footer, Navbar } from "../Components/Index"
 const MainLayout = () => {
     const { fromCurrency, setFromCurrency, toCurrency, setToCurrency, firstAmount } = useContext(CurrencyContext)
     const [resultCurrency, setResultCurrency] = useState(0)
-    const codeFromCurrency = fromCurrency.split(" ")[1]
-    const codeToCurrency = toCurrency.split(" ")[1]
-    
+    const codeFromCurrency = fromCurrency.split(" ")[0]
+    const codeToCurrency = toCurrency.split(" ")[0]
+    console.log(codeFromCurrency, codeToCurrency)
+
     useEffect(() => {
         if (firstAmount) {
             axios(`${import.meta.env.VITE_BASE_URL}`, {
