@@ -11,7 +11,7 @@ const SelectCountry = (props) => {
     const [isClearable, setIsClearable] = useState(true)
     const [isSearchable, setIsSearchable] = useState(true)
 
-    console.log(value)
+    // console.log(value)
     // console.log(data)
     // console.log(countryData)
 

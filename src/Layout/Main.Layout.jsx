@@ -5,7 +5,17 @@ import { InputAmount, SelectCountry, SwitchCurrency } from "../Components/Index"
 import { Footer, Navbar } from "../Components/Index"
 
 const MainLayout = () => {
-    const { fromCurrency, setFromCurrency, toCurrency, setToCurrency, firstAmount } = useContext(CurrencyContext);
+    const { fromCurrency, setFromCurrency, toCurrency, setToCurrency, firstAmount } = useContext(CurrencyContext)
+    const [resultCurrency, setResultCurrency] = useState(0)
+    const codeFromCurrency = fromCurrency.split(" ")[1]
+    const codeToCurrency = toCurrency.split(" ")[1]
+
+    console.log(firstAmount)
+    useEffect(() => {
+        if (firstAmount) {
+
+        }
+    }, [firstAmount, fromCurrency, toCurrency])
 
     return (
         <div className='relative z-10 min-h-screen flex justify-between items-center flex-col max-w-7xl mx-auto sm:px-16 px-6'>
