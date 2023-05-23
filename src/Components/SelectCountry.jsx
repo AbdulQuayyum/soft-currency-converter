@@ -25,6 +25,10 @@ const SelectCountry = (props) => {
         })
     };
 
+    if (error) {
+        return "Something went wrong!"
+    }
+
     // const DataFilter = data.filter(item => "currencies" in item);
     // const DataCountries = DataFilter.map(item => {
     //     return `${item.flag} ${Object.keys(item.currencies)[0]} - ${item.name.common}`
