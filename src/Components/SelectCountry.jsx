@@ -8,7 +8,6 @@ const SelectCountry = (props) => {
     const { label, value, setValue } = props
     // const [data, error, loaded] = UseAxios("https://raw.githubusercontent.com/AbdulQuayyum/data.json/Source/country-flag.json")
     const [data, error, loaded] = UseAxios("https://raw.githubusercontent.com/AbdulQuayyum/data.json/Source/allcountries.json")
-    const [isClearable, setIsClearable] = useState(true)
     const [isSearchable, setIsSearchable] = useState(true)
 
     // console.log(value)
@@ -64,7 +63,6 @@ const SelectCountry = (props) => {
                 classNamePrefix="select a country"
                 value={DataCountries?.name}
                 onChange={(event) => { setValue(event?.name) }}
-                isClearable={isClearable}
                 isSearchable={isSearchable}
                 options={DataCountries}
                 formatOptionLabel={country => (
