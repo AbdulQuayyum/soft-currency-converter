@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Select from "react-select"
 import UseAxios from "../Utilities/UseAxios"
-import countryData from "../Data/allcountries.json"
+// import countryData from "../Data/allcountries.json"
 
 const SelectCountry = (props) => {
     const [value, setValue] = useState()
