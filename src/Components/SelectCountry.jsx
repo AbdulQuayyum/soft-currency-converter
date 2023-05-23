@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Select from "react-select"
 import UseAxios from "../Utilities/UseAxios"
+import { SkeletonCard } from "../Components/Index"
 // import countryData from "../Data/allcountries.json"
 
 const SelectCountry = (props) => {
@@ -24,6 +25,12 @@ const SelectCountry = (props) => {
             padding: "0px 10px"
         })
     };
+
+    if(loaded) {
+        return(
+            <SkeletonCard />
+        )
+    }
 
     if (error) {
         return "Something went wrong!"
