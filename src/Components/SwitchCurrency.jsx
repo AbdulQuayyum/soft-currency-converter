@@ -6,8 +6,8 @@ const SwitchCurrency = () => {
     const { fromCurrency, setFromCurrency, toCurrency, setToCurrency } = useContext(CurrencyContext)
 
     const HandleSwitch = () => {
-        setFromCurrency(toCurrency)
-        setToCurrency(fromCurrency)
+        setFromCurrency(toCurrency);
+        setToCurrency(fromCurrency);
     }
     return (
         <div>
